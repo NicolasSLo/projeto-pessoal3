@@ -1,0 +1,79 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: radial-gradient(#1f292e, #12181b);
+    font-family: arial;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+}
+.opacity{
+    opacity: 0;
+    animation: appears 3s ease forwards;
+    animation-delay: 1s;
+    text-align: center;
+}
+@keyframes appears {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 10;
+    }
+}
+header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background: linear-gradient(45deg, #171e22, #263238, #171e22);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 5px 0px;
+    animation: slide 1.5s ease forwards;
+}
+@keyframes slide {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+header h1{
+    animation: blurAnm ease infinite 7s;
+    justify-self: center;
+}
+header a{
+    justify-self: left;
+    position: relative;
+    left: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    justify-self: center;
+    transition: 0.4s;
+    font-size: 1.2em;
+    position: relative;
+}
+a:hover{
+    color: rgb(255, 0, 128);
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 128));
+}
+@keyframes blurAnm {
+    0%{
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.487));
+    }
+    50%{
+        filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.487));
+    }
+    100%{
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.487));
+    }
+}

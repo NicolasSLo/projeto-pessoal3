@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/statics/style.css">
+{{>_msg}}
+<form action="/login" method="post">
+    <h1>Cadastrar</h1>
+    <input type="text" name="nome" id="nome" placeholder="Nome">
+    <input type="password" name="senha" id="senha" placeholder="Senha" onkeyup="alertaCor()">
+    <input type="password" name="senha2" id="senha2" placeholder="Confime sua Senha" onkeyup="alertaCor()">
+    <button type="submit">Adicionar</button>
+    <a href="/login">Já é cadastrado? faça o login!</a>
+</form>
+
+<script src="/statics/script.js"></script>

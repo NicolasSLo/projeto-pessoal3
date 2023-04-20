@@ -1,0 +1,111 @@
+body{
+    display: grid;
+    justify-content: center;
+    background: radial-gradient(#1f292e, #12181b);
+    font-family: arial;
+    color: white;
+}
+form{
+    background: #263239;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 18px;
+    margin-top: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.4s;
+    opacity: 0;
+    animation: appear 1.2s ease forwards;
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 10;
+    }
+}
+form:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+input{
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: solid white 2px;
+    background: none;
+    color: white;
+    text-align: center;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.712);
+}
+button{
+    background: none ;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 2px rgb(255, 0, 128);
+    width: 250px;
+    color: white;
+    transition: 0.4s;
+    justify-self: center;
+}
+button:hover{
+    width: 300px;
+    background: rgb(255, 0, 128);
+    filter: drop-shadow(0 0 20px rgb(255, 0, 128));
+    cursor: pointer;
+}
+
+.alert{
+    background: rgba(0, 255, 0, 0.249);
+    padding: 10px 20px;
+    border-radius: 7px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    animation: slide 1.2s ease forwards;
+    position: fixed;
+    justify-self: center;
+}
+.alertError{
+    background: rgba(255, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 7px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    animation: slide 1.2s ease forwards;
+    position: fixed;
+    justify-self: center;
+}
+@keyframes slide {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 10;
+    }
+}
+a{
+    text-decoration: none;
+    color: white;
+    justify-self: center;
+    transition: 0.4s;
+}
+a:hover{
+    color: rgb(255, 0, 128);
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 128));
+}
+#senha2{
+    transition: 0.4s;
+}
